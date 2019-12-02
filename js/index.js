@@ -63,18 +63,12 @@ contact.textContent = siteContent.nav["nav-item-6"];
 // ----- HERO SECTION -----
 const title = document.querySelector('h1');
 title.textContent = siteContent.cta.h1;
-// title.style.width = '40%';
-// title.style.textAlign = 'center';
-
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
 const heroImg = document.querySelector('.cta img');
 heroImg.src = siteContent.cta["img-src"];
-
-// const navAnchor = document.querySelectorAll('a');
-// navAnchor.forEach( item => item.style.color = 'green');
 
 // ----- CONTENT SECTION -----
 
@@ -145,3 +139,22 @@ email.textContent = siteContent.contact.email;
 // ---- FOOTER SECTION ----
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+// ----- NEW CONTENT -----
+
+  // Prepend
+  const prepend = document.createElement('a');
+  prepend.textContent = 'Home';
+  const navPrepend = document.querySelector('nav');
+  navPrepend.prepend(prepend);
+
+  // Append Child
+  const append = document.createElement('a');
+  append.textContent = 'Media';
+  const appendChild = document.querySelector('nav');
+  appendChild.appendChild(append);
+
+  // Change Color
+  const navLinks = document.querySelectorAll('a');
+  navLinks.forEach( item => item.style.color = 'green');
+  
