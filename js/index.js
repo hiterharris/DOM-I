@@ -154,7 +154,38 @@ footer.textContent = siteContent.footer.copyright;
   const appendChild = document.querySelector('nav');
   appendChild.appendChild(append);
 
-  // Change Color
+  // Style Changes
   const navLinks = document.querySelectorAll('a');
   navLinks.forEach( item => item.style.color = 'green');
-  
+
+  const titleSize = document.querySelectorAll('h4');
+  titleSize.forEach( item => item.style.fontSize = '24px');
+  titleSize.forEach( item => item.style.margin = '2%');
+
+  const paragraphSize = document.querySelectorAll('p');
+  paragraphSize.forEach( item => item.style.fontSize = '18px');
+  paragraphSize.forEach( item => item.style.margin = '2%');
+
+  // Creating new div
+  const newDiv = document.createElement('div');
+  newDiv.id = 'newDiv'
+  const appendDiv = document.querySelector('body');
+  appendDiv.appendChild(newDiv);
+
+  // Creating new button
+  const newButton = document.createElement('button');
+  newButton.id = 'btn';
+  newButton.textContent = 'Button';
+  const appendButton = document.getElementById('newDiv');
+  appendButton.appendChild(newButton);
+
+  // Styling
+  newDiv.style.textAlign = 'center';
+  newButton.style.padding = '.5%';
+  newButton.style.margin = '2%';
+  newButton.style.width = '10%';
+
+  // Event Listener
+  document.getElementById('btn').addEventListener("click", function() {
+    alert("Hello World!!");
+  });
