@@ -123,3 +123,18 @@ visionTitle.textContent = siteContent["main-content"]["vision-h4"];
 const visionInfo = bottomContentInfo[2];
 visionInfo.textContent = siteContent["main-content"]["vision-content"];
 
+// ----- CONTACT SECTION -----
+const contactTitle = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+contactTitle.textContent = siteContent.contact["contact-h4"];
+
+const address = contactInfo[0];
+address.textContent = siteContent.contact.address;
+address.style.width = '25%';
+
+const phone = contactInfo[1];
+phone.textContent = siteContent.contact.phone;
+
+const email = contactInfo[2];
+email.textContent = siteContent.contact.email;
