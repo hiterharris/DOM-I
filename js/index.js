@@ -63,6 +63,9 @@ contact.textContent = siteContent.nav["nav-item-6"];
 // ----- HERO SECTION -----
 const title = document.querySelector('h1');
 title.textContent = siteContent.cta.h1;
+// title.style.width = '40%';
+// title.style.textAlign = 'center';
+
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
@@ -138,3 +141,7 @@ phone.textContent = siteContent.contact.phone;
 
 const email = contactInfo[2];
 email.textContent = siteContent.contact.email;
+
+// ---- FOOTER SECTION ----
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
