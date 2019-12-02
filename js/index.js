@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// NAV BAR
+// ----- NAV BAR -----
 const services = document.querySelector('a:nth-child(1)');
 services.textContent = siteContent.nav["nav-item-1"];
 
@@ -60,7 +60,7 @@ about.textContent = siteContent.nav["nav-item-5"];
 const contact = document.querySelector('a:nth-child(6)');
 contact.textContent = siteContent.nav["nav-item-6"];
 
-// HERO SECTION
+// ----- HERO SECTION -----
 const title = document.querySelector('h1');
 title.textContent = siteContent.cta.h1;
 
@@ -70,5 +70,56 @@ button.textContent = siteContent.cta.button;
 const heroImg = document.querySelector('.cta img');
 heroImg.src = siteContent.cta["img-src"];
 
+// const navAnchor = document.querySelectorAll('a');
+// navAnchor.forEach( item => item.style.color = 'green');
 
+// ----- CONTENT SECTION -----
+
+// Top Content
+const topContentTitle = document.querySelectorAll('.top-content h4');
+const topContentInfo = document.querySelectorAll('.top-content p');
+
+  // Features Section
+  const featuresTitle = topContentTitle[0];
+  featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+
+  const featuresInfo = topContentInfo[0];
+  featuresInfo.textContent = siteContent["main-content"]["features-content"];
+
+  // About Section
+  const aboutTitle = topContentTitle[1];
+  aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+  const aboutInfo = topContentInfo[1];
+  aboutInfo.textContent = siteContent["main-content"]["about-content"];
+
+// Image Section
+const contentImg = document.querySelector('.middle-img');
+contentImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+// Bottom Content
+const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
+const bottomContentInfo = document.querySelectorAll('.bottom-content p');
+
+// Services
+const servicesTitle = bottomContentTitle[0];
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const servicesInfo = bottomContentInfo[0];
+servicesInfo.textContent = siteContent["main-content"]["services-content"];
+
+// Product
+const productTitle = bottomContentTitle[1];
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const productInfo = bottomContentInfo[1];
+productInfo.textContent = siteContent["main-content"]["product-content"];
+
+// Vison
+const visionTitle = bottomContentTitle[2];
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionInfo = bottomContentInfo[2];
+visionInfo.textContent = siteContent["main-content"]["vision-content"];
 
