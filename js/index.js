@@ -41,22 +41,34 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// NAV BAR
 const services = document.querySelector('a:nth-child(1)');
-services.textContent = 'Services';
+services.textContent = siteContent.nav["nav-item-1"];
 
 const product = document.querySelector('a:nth-child(2)');
-product.textContent = 'Product';
+product.textContent = siteContent.nav["nav-item-2"];
 
 const vision = document.querySelector('a:nth-child(3)');
-vision.textContent = 'Vision';
+vision.textContent = siteContent.nav["nav-item-3"];
 
 const features = document.querySelector('a:nth-child(4)');
-features.textContent = 'Features';
+features.textContent = siteContent.nav["nav-item-4"];
 
 const about = document.querySelector('a:nth-child(5)');
-about.textContent = 'About';
+about.textContent = siteContent.nav["nav-item-5"];
 
 const contact = document.querySelector('a:nth-child(6)');
-contact.textContent = 'Contact';
+contact.textContent = siteContent.nav["nav-item-6"];
+
+// HERO SECTION
+const title = document.querySelector('h1');
+title.textContent = siteContent.cta.h1;
+
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+const heroImg = document.querySelector('.cta img');
+heroImg.src = siteContent.cta["img-src"];
+
 
 
