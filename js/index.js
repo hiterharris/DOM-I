@@ -40,6 +40,7 @@ const siteContent = {
 // ----- NAV BAR -----
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 const services = document.querySelector('a:nth-child(1)');
 services.textContent = siteContent.nav["nav-item-1"];
 
