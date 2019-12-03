@@ -76,24 +76,23 @@ heroImg.src = siteContent.cta["img-src"];
 const topContentTitle = document.querySelectorAll('.top-content h4');
 const topContentInfo = document.querySelectorAll('.top-content p');
 
-  // Features Section
-  const featuresTitle = topContentTitle[0];
-  featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+// Features Section
+const featuresTitle = topContentTitle[0];
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
 
-  const featuresInfo = topContentInfo[0];
-  featuresInfo.textContent = siteContent["main-content"]["features-content"];
+const featuresInfo = topContentInfo[0];
+featuresInfo.textContent = siteContent["main-content"]["features-content"];
 
-  // About Section
-  const aboutTitle = topContentTitle[1];
-  aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+// About Section
+const aboutTitle = topContentTitle[1];
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
 
-  const aboutInfo = topContentInfo[1];
-  aboutInfo.textContent = siteContent["main-content"]["about-content"];
+const aboutInfo = topContentInfo[1];
+aboutInfo.textContent = siteContent["main-content"]["about-content"];
 
 // Image Section
 const contentImg = document.querySelector('.middle-img');
 contentImg.src = siteContent["main-content"]["middle-img-src"];
-
 
 // Bottom Content
 const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
@@ -142,50 +141,50 @@ footer.textContent = siteContent.footer.copyright;
 
 // ----- NEW CONTENT -----
 
-  // Prepend
-  const prepend = document.createElement('a');
-  prepend.textContent = 'Home';
-  const navPrepend = document.querySelector('nav');
-  navPrepend.prepend(prepend);
+// Prepend
+const prepend = document.createElement('a');
+prepend.textContent = 'Home';
+const navPrepend = document.querySelector('nav');
+navPrepend.prepend(prepend);
 
-  // Append Child
-  const append = document.createElement('a');
-  append.textContent = 'Media';
-  const appendChild = document.querySelector('nav');
-  appendChild.appendChild(append);
+// Append Child
+const append = document.createElement('a');
+append.textContent = 'Media';
+const appendChild = document.querySelector('nav');
+appendChild.appendChild(append);
 
-  // Style Changes
-  const navLinks = document.querySelectorAll('a');
-  navLinks.forEach( item => item.style.color = 'green');
+// Style Changes
+const navLinks = document.querySelectorAll('a');
+navLinks.forEach( item => item.style.color = 'green');
 
-  const titleSize = document.querySelectorAll('h4');
-  titleSize.forEach( item => item.style.fontSize = '24px');
-  titleSize.forEach( item => item.style.margin = '2%');
+const titleSize = document.querySelectorAll('h4');
+titleSize.forEach( item => item.style.fontSize = '24px');
+titleSize.forEach( item => item.style.margin = '2%');
 
-  const paragraphSize = document.querySelectorAll('p');
-  paragraphSize.forEach( item => item.style.fontSize = '18px');
-  paragraphSize.forEach( item => item.style.margin = '2%');
+const paragraphSize = document.querySelectorAll('p');
+paragraphSize.forEach( item => item.style.fontSize = '18px');
+paragraphSize.forEach( item => item.style.margin = '2%');
 
-  // Creating new div
-  const newDiv = document.createElement('div');
-  newDiv.id = 'newDiv'
-  const appendDiv = document.querySelector('body');
-  appendDiv.appendChild(newDiv);
+// Creating new div
+const newDiv = document.createElement('div');
+newDiv.id = 'newDiv'
+const appendDiv = document.querySelector('body');
+appendDiv.appendChild(newDiv);
 
-  // Creating new button
-  const newButton = document.createElement('button');
-  newButton.id = 'btn';
-  newButton.textContent = 'Button';
-  const appendButton = document.getElementById('newDiv');
-  appendButton.appendChild(newButton);
+// Creating new button
+const newButton = document.createElement('button');
+newButton.id = 'btn';
+newButton.textContent = 'Button';
+const appendButton = document.getElementById('newDiv');
+appendButton.appendChild(newButton);
 
-  // Styling
-  newDiv.style.textAlign = 'center';
-  newButton.style.padding = '.5%';
-  newButton.style.margin = '2%';
-  newButton.style.width = '10%';
+// Styling
+newDiv.style.textAlign = 'center';
+newButton.style.padding = '.5%';
+newButton.style.margin = '2%';
+newButton.style.width = '10%';
 
-  // Event Listener
-  document.getElementById('btn').addEventListener("click", function() {
-    alert("Hello World!!");
-  });
+// Event Listener
+document.getElementById('btn').addEventListener("click", function() {
+  alert("Hello World!!");
+});
