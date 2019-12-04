@@ -37,6 +37,153 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// ----- NAV BAR -----
+const logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const services = document.querySelector('a:nth-child(1)');
+services.textContent = siteContent.nav["nav-item-1"];
+
+const product = document.querySelector('a:nth-child(2)');
+product.textContent = siteContent.nav["nav-item-2"];
+
+const vision = document.querySelector('a:nth-child(3)');
+vision.textContent = siteContent.nav["nav-item-3"];
+
+const features = document.querySelector('a:nth-child(4)');
+features.textContent = siteContent.nav["nav-item-4"];
+
+const about = document.querySelector('a:nth-child(5)');
+about.textContent = siteContent.nav["nav-item-5"];
+
+const contact = document.querySelector('a:nth-child(6)');
+contact.textContent = siteContent.nav["nav-item-6"];
+
+// ----- HERO SECTION -----
+const title = document.querySelector('h1');
+title.textContent = siteContent.cta.h1;
+
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+const heroImg = document.querySelector('.cta img');
+heroImg.src = siteContent.cta["img-src"];
+
+// ----- CONTENT SECTION -----
+
+// Top Content
+const topContentTitle = document.querySelectorAll('.top-content h4');
+const topContentInfo = document.querySelectorAll('.top-content p');
+
+// Features Section
+const featuresTitle = topContentTitle[0];
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresInfo = topContentInfo[0];
+featuresInfo.textContent = siteContent["main-content"]["features-content"];
+
+// About Section
+const aboutTitle = topContentTitle[1];
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutInfo = topContentInfo[1];
+aboutInfo.textContent = siteContent["main-content"]["about-content"];
+
+// Image Section
+const contentImg = document.querySelector('.middle-img');
+contentImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Bottom Content
+const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
+const bottomContentInfo = document.querySelectorAll('.bottom-content p');
+
+// Services
+const servicesTitle = bottomContentTitle[0];
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const servicesInfo = bottomContentInfo[0];
+servicesInfo.textContent = siteContent["main-content"]["services-content"];
+
+// Product
+const productTitle = bottomContentTitle[1];
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const productInfo = bottomContentInfo[1];
+productInfo.textContent = siteContent["main-content"]["product-content"];
+
+// Vison
+const visionTitle = bottomContentTitle[2];
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionInfo = bottomContentInfo[2];
+visionInfo.textContent = siteContent["main-content"]["vision-content"];
+
+// ----- CONTACT SECTION -----
+const contactTitle = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+contactTitle.textContent = siteContent.contact["contact-h4"];
+
+const address = contactInfo[0];
+address.textContent = siteContent.contact.address;
+address.style.width = '25%';
+
+const phone = contactInfo[1];
+phone.textContent = siteContent.contact.phone;
+
+const email = contactInfo[2];
+email.textContent = siteContent.contact.email;
+
+// ---- FOOTER SECTION ----
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
+// ----- NEW CONTENT -----
+
+// Prepend
+const prepend = document.createElement('a');
+prepend.textContent = 'Home';
+const navPrepend = document.querySelector('nav');
+navPrepend.prepend(prepend);
+
+// Append Child
+const append = document.createElement('a');
+append.textContent = 'Media';
+const appendChild = document.querySelector('nav');
+appendChild.appendChild(append);
+
+// Style Changes
+const navLinks = document.querySelectorAll('a');
+navLinks.forEach( item => item.style.color = 'green');
+
+const titleSize = document.querySelectorAll('h4');
+titleSize.forEach( item => item.style.fontSize = '24px');
+titleSize.forEach( item => item.style.margin = '2%');
+
+const paragraphSize = document.querySelectorAll('p');
+paragraphSize.forEach( item => item.style.fontSize = '18px');
+paragraphSize.forEach( item => item.style.margin = '2%');
+
+// Creating new div
+const newDiv = document.createElement('div');
+newDiv.id = 'newDiv'
+const appendDiv = document.querySelector('body');
+appendDiv.appendChild(newDiv);
+
+// Creating new button
+const newButton = document.createElement('button');
+newButton.id = 'btn';
+newButton.textContent = 'Button';
+const appendButton = document.getElementById('newDiv');
+appendButton.appendChild(newButton);
+
+// Styling
+newDiv.style.textAlign = 'center';
+newButton.style.padding = '.5%';
+newButton.style.margin = '2%';
+newButton.style.width = '10%';
+
+// Event Listener
+document.getElementById('btn').addEventListener("click", function() {
+  alert("Hello World!!");
+});
